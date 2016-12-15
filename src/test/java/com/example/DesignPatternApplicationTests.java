@@ -10,10 +10,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class DesignPatternApplicationTests {
 
-
+	@Autowired
+	ARuleHandler aRuleHandler;
 	@Test
 	public void contextLoads() {
-		new RuleInner().doCheck();
+		aRuleHandler.check(null);
 	}
 
 }
